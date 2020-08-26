@@ -14,14 +14,14 @@ if(isset($_POST['giris'])) {
 
   $var=$kullanici_kayitli_mi->rowCount();
 
-  if($var > 0 ) {
+    if($var > 0 ) {
     $_SESSION['normalgiris']=$kullanici_adi;
-    header("Location:anasayfa.php");
+    Header("Location:anasayfa?durum=hosgeldin");
 
   }
 
   else{
-    print_r("HATA!!!");
+    Header("Location:girisyap?durum=hata");
   }
 }
 
